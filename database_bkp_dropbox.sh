@@ -15,8 +15,11 @@ DROPBOX_BKP_DIR="/database-backup"
 ################
 
 #Create directory if not exists
-if [ ! -d ${DIR_BKP} ]; then
-  mkdir -p ${DIR_BKP}
+if [ ! -d ${LOCAL_BKP_DIR} ]; then
+  mkdir -p ${LOCAL_BKP_DIR}
+fi
+if [ ! -d ${DROPBOX_BKP_DIR} ]; then
+  mkdir -p ${DROPBOX_BKP_DIR}
 fi
 
 #Dump database
